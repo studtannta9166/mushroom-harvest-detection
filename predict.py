@@ -11,6 +11,7 @@ print("done! check runs/detect/predict/ for results")
 
 
 
+'''2.if you have image:
 from ultralytics import YOLO
 
 model = YOLO('best.pt')
@@ -24,4 +25,14 @@ for result in results:
         class_id = int(box.cls)
         confidence = float(box.conf)
         class_name = model.names[class_id]
-        print(f"Detected: {class_name} — confidence: {confidence:.2%}")
+        print(f"Detected: {class_name} — confidence: {confidence:.2%}")'''
+
+
+'''1.detecct live from webcam:
+from ultralytics import YOLO
+
+model = YOLO('best.pt')
+
+# 0 = default webcam (built-in laptop camera)
+# if he has external camera, try 1 or 2
+results = model(source=0, show=True, conf=0.5)'''
