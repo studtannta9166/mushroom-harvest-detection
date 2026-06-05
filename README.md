@@ -49,19 +49,34 @@ Detect and classify mushroom types in images using object detection. This is **P
 ---
 
 ## Project Structure
+## 🗂️ Project Structure
+
+```
 mushroom-harvest-detection/
 ├── src/
+│   ├── __init__.py
 │   ├── data/
-│   │   ├── download_data.py      # Download all datasets from Roboflow
-│   │   └── merge_datasets.py     # Merge + remap class labels
-│   └── training/
-│       └── train.py              # YOLOv8 training script
-├── datasets/                     # Downloaded + merged data (gitignored)
-├── models/                       # Trained weights (gitignored)
+│   │   ├── __init__.py
+│   │   ├── download_data.py       # Download all 7 datasets from Roboflow
+│   │   └── merge_datasets.py      # Merge + remap class labels across datasets
+│   ├── training/
+│   │   ├── __init__.py
+│   │   └── train.py               # YOLOv8s training with augmentation config
+│   ├── evaluation/
+│   │   ├── __init__.py
+│   │   ├── predict.py             # Run inference on test set or single image
+│   │   └── evaluate.py            # Metrics, confusion matrix (in progress)
+│   └── deployment/
+│       └── __init__.py            # FastAPI endpoint (in progress)
+├── configs/                       # Training hyperparameters (in progress)
+├── demo/                          # Gradio web demo (in progress)
+├── notebooks/                     # Analysis and visualizations (in progress)
+├── models/                        # Trained weights — gitignored, on HuggingFace
+├── datasets/                      # Downloaded data — gitignored
+├── runs/                          # Training outputs — gitignored
 ├── requirements.txt
 └── README.md
-
----
+```
 
 ## Setup & Run
 
