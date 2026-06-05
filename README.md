@@ -106,3 +106,16 @@ Python · YOLOv8 · PyTorch · Roboflow · OpenCV · Google Colab · Git
 
 Datasets used under CC BY 4.0. Model weights available on request.
 
+## Planned Deployment
+
+Camera-based real-time detection system. The model will be connected to a 
+physical camera mounted above mushroom growing beds to automatically flag 
+when mushrooms are visually ready for harvest.
+
+Status: Model trained ; currently working on more data collection from real farm and imporving results ; Camera deployment: in August 2026
+## Training Environment
+
+- Platform: Google Colab
+- GPU: Tesla T4 (15GB VRAM)
+- Python: 3.12
+- Framework: Ultralytics YOLOv8 8.4.60, PyTorch 2.11
